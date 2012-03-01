@@ -7,7 +7,7 @@ from locality import managers
 class Country(models.Model):
 	iso2 = models.CharField('ISO 3166-1 Alpha 2 Name', max_length=2, unique=True)
 	iso3 = models.CharField('ISO 3166-1 Alpha 3 Name', max_length=3, unique=True)
-	name = models.CharField('Country Name', max_length=32, unique=True)
+	name = models.CharField('Country Name', max_length=64, unique=True)
 	
 	objects = managers.CountryManager()
 
@@ -32,7 +32,7 @@ class CountryAdmin(admin.ModelAdmin):
 
 class Territory(models.Model):
 	abbr = models.CharField('Territory Abbreviation', max_length=5)
-	name = models.CharField('Territory Name', max_length=32)
+	name = models.CharField('Territory Name', max_length=64)
 	country = models.ForeignKey('Country', related_name="territories", on_delete=models.CASCADE)
 	
 	objects = managers.TerritoryManager()

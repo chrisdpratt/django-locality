@@ -1,5 +1,6 @@
 MANIFEST.in
 setup.py
+src/django_locality.egg-info/MANIFEST.in
 src/django_locality.egg-info/PKG-INFO
 src/django_locality.egg-info/SOURCES.txt
 src/django_locality.egg-info/dependency_links.txt
@@ -15,3 +16,6 @@ src/locality/tests.py
 src/locality/urls.py
 src/locality/views.py
 src/locality/fixtures/initial_data.json
+src/locality/migrations/0001_initial.py
+src/locality/migrations/0002_auto__chg_field_territory_name__chg_field_country_name.py
+src/locality/migrations/__init__.py
